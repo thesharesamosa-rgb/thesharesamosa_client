@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Samosa & Street Food Inspired Colors */
+    --background: 42 100% 98%;
+    --foreground: 25 25% 15%;
+
+    --card: 42 50% 97%;
+    --card-foreground: 25 25% 15%;
+
+    --popover: 42 100% 98%;
+    --popover-foreground: 25 25% 15%;
+
+    /* Golden Samosa Primary */
+    --primary: 35 88% 55%;
+    --primary-foreground: 42 100% 98%;
+    
+    /* Warm Orange Secondary */
+    --secondary: 25 95% 85%;
+    --secondary-foreground: 25 25% 15%;
+
+    /* Subtle Warm Muted */
+    --muted: 42 30% 92%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Fresh Chutney Green Accent */
+    --accent: 95 85% 25%;
+    --accent-foreground: 42 100% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 42 100% 98%;
+
+    --border: 42 25% 88%;
+    --input: 42 25% 88%;
+    --ring: 35 88% 55%;
+
+    /* Custom Gradients */
+    --gradient-samosa: linear-gradient(135deg, hsl(35 88% 55%), hsl(25 95% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(35 88% 55% / 0.95), hsl(25 95% 65% / 0.95));
+    --gradient-warm: linear-gradient(180deg, hsl(42 50% 97%), hsl(42 30% 95%));
+    
+    /* Shadows */
+    --shadow-warm: 0 10px 30px -10px hsl(35 88% 55% / 0.25);
+    --shadow-card: 0 4px 20px -4px hsl(25 25% 15% / 0.1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with warm tones */
+    --background: 25 20% 8%;
+    --foreground: 42 100% 95%;
+
+    --card: 25 20% 10%;
+    --card-foreground: 42 100% 95%;
+
+    --popover: 25 20% 8%;
+    --popover-foreground: 42 100% 95%;
+
+    --primary: 35 88% 55%;
+    --primary-foreground: 25 20% 8%;
+
+    --secondary: 25 25% 15%;
+    --secondary-foreground: 42 100% 95%;
+
+    --muted: 25 25% 15%;
+    --muted-foreground: 42 20% 65%;
+
+    --accent: 95 85% 35%;
+    --accent-foreground: 25 20% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 42 100% 95%;
+
+    --border: 25 25% 15%;
+    --input: 25 25% 15%;
+    --ring: 35 88% 55%;
+
+    /* Dark mode gradients */
+    --gradient-samosa: linear-gradient(135deg, hsl(35 88% 45%), hsl(25 95% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(35 88% 45% / 0.95), hsl(25 95% 55% / 0.95));
+    --gradient-warm: linear-gradient(180deg, hsl(25 20% 10%), hsl(25 25% 12%));
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
