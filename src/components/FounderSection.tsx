@@ -13,13 +13,7 @@ const FounderSection = () => {
           <Card className="shadow-card border-0">
             <CardContent className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="flex-shrink-0">
-                  <img 
-                    src={founderInfo.photo} 
-                    alt="Founder of The Share Samosa"
-                    className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-warm"
-                  />
-                </div>
+                
                 <div className="text-center md:text-left">
                   <h3 className="text-2xl font-bold mb-4 text-foreground">
                     {founderInfo.title}
